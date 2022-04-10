@@ -1,0 +1,40 @@
+.tabs{
+    /* to have them side by side */
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   border-bottom: 2px solid rgb(77, 77, 238);
+
+}
+
+.tabs > li{
+    padding: 0.5em 1em;
+    margin: 0 1 em;
+}
+
+.current{
+    /*background of tabs */
+    background:rgb(255, 255, 255);
+    color: rgb(77, 77, 238);
+   font-weight: bold;
+   border: 2px solid rgb(77, 77, 238);
+   border-bottom: 0;
+   border-top-right-radius: 5px;
+   border-top-left-radius: 5px;
+   position: relative;
+   top: 2px;
+}
+
+.content{
+    padding: 1em 2em;
+}
+/*button design*/
+button{
+    /*size of font, space button apart, background color */
+    font-size: small;
+    margin-bottom: 1%;
+    margin-left: 0.5%;
+    padding: 0.5%;
+      
+}
