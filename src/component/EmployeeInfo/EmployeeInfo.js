@@ -8,9 +8,10 @@ const EmployeeInfo = () => {
     const [phone,setPhone] = useState('');
     const [mail,setMail] = useState('');
    
+    
     return(
         //uses form css to align the labels vertically
-        <div className = "form">
+        <div className = "ContactUs">
             {/*form creation process*/}
             <form >
                  <label>Employee ID: </label> 
@@ -18,21 +19,24 @@ const EmployeeInfo = () => {
                   <input
                   type="number"
                   required
+                  placeholder="e.g.1234567890"
                   value ={employeeId}
                   id="txtName"
                   onChange={(e)=> setEmployeeId(e.target.value)}
                   />
                    <label >First Name: </label> 
                    <input 
-                   type ="text"
+                   type = "text"
                    required
-                   value ={first}
+                   placeholder =" Enter first name ..."
+                   value = {first}
                    onChange={(e)=> setFirst(e.target.value)}
                    />
                    <label>Last Name: </label> 
                    <input 
-                   type ="text"
+                   type = "text"
                    required
+                   placeholder = "Enter last name ..."
                    value ={last}
                    onChange={(e)=> setLast(e.target.value)}
                    />
@@ -40,6 +44,7 @@ const EmployeeInfo = () => {
                    <input 
                    type ="number"
                    required
+                   placeholder="MMDDYYYY"
                    value ={birthDate}
                    onChange={(e)=> setBirthDate(e.target.value)}
                    /> 
@@ -47,18 +52,18 @@ const EmployeeInfo = () => {
                    <input 
                    type ="number"
                    required
+                   placeholder="e.g. 1234567890"
                    value ={phone}
                    onChange={(e)=> setPhone(e.target.value)}
                    />
                    <label>Email: </label> 
                    <input 
-                   type ="email"
+                   type = "email"
                    required
+                   placeholder = "abc@email.com"
                    value ={mail}
                    onChange={(e)=> setMail(e.target.value)}
                    />   
-                  
-
                 
                   {/*Display infomation of the form*/}
                   <p>{employeeId}</p>
@@ -70,8 +75,8 @@ const EmployeeInfo = () => {
                    
                 </form>
                 <button type= "button" value="clear"
-                onclck="deleteSomething()">Clear</button>
-               <button type= "submit">Submit</button>
+                onClick="deleteSomething()">Clear</button>
+            <button type= "submit">Submit</button>
         </div>
     );
 }

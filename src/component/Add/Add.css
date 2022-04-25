@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .Add {
+    width: 60vh;
+    margin-left: 0auto;
+    display: flex;
+    justify-content: space-between;
+        text-align: left;
+    
+  }
+  
+  .form-field {
+    flex: 2;
+  }
+
+  .output {
+    margin-left: 3rem;
+    flex: 1;
+  }
+  .form-field label,
+  .Add h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(84, 84, 84);
+  }
+  
+  /*color of box */
+  input {
+    display: flex;
+    height: 35px;
+    width: 100%;
+    padding: 7px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(115, 115, 115);
+  }
+
+  /* color of box changes when it is clicked on */
+  input:focus {
+    border: 2px solid rgb(14, 15, 16);
+  }
+  
+  .element {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .first-division {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px 0.5rem 0;
+    width: 100%;
+  }
+  button {
+    
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 2px;
+
+    /*spacing for button */
+    margin-right: 2%;
+    
+  }
+  
+  .submit{
+display: flex;
+
+  }
+   /* Add a Service */
+  .first-division button {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+  }
+  
+   /* remove button*/
+  .second-division button {
+    color: red;
+    border: 1px solid red;
+  }

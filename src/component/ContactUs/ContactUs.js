@@ -1,6 +1,7 @@
 import { useState } from "react";
-import styles from "./form.css";
-const Form = () => {
+import "./ContactUs.css";
+
+const ContactUs = () => {
     const [first,setFirst] = useState('');
     const [last,setLast] = useState('');
     const [phone,setPhone] = useState('');
@@ -8,13 +9,15 @@ const Form = () => {
     const [message,setMessage] = useState('');
     return(
         //uses form css to align the labels vertically
-        <div className = "form">
+        <div className = "ContactUs">
             {/*form creation process*/}
-            <form >
+            <form  autoComplete="off">
                    <label >First Name: </label> 
                    <input 
                    type ="text"
                    required
+                   placeholder="Enter first name ..."
+                   id="first"
                    value ={first}
                    onChange={(e)=> setFirst(e.target.value)}
                    />
@@ -22,6 +25,7 @@ const Form = () => {
                    <input 
                    type ="text"
                    required
+                   placeholder="Enter last name ..."
                    value ={last}
                    onChange={(e)=> setLast(e.target.value)}
                    />
@@ -29,6 +33,7 @@ const Form = () => {
                    <input 
                    type ="number"
                    required
+                   placeholder="e.g. 1234567890"
                    value ={phone}
                    onChange={(e)=> setPhone(e.target.value)}
                    />
@@ -36,6 +41,7 @@ const Form = () => {
                    <input 
                    type ="email"
                    required
+                   placeholder="abc@email.com"
                    value ={mail}
                    onChange={(e)=> setMail(e.target.value)}
                    />   
@@ -44,6 +50,8 @@ const Form = () => {
                   <textarea
                   type="text"
                   required
+                  /*leaves message inside box*/
+                  placeholder ="Enter your messege ..."
                   value ={message}
                   id="txtName"
                   onChange={(e)=> setMessage(e.target.value)}
@@ -56,9 +64,10 @@ const Form = () => {
                    <p>{message}</p>
                 </form>
                 <button type= "button" value="clear"
-                onclck="deleteSomething()">Clear</button>
-               <button type= "submit">Submit</button>
+                onClick="deleteSomething()">Clear</button>
+              <button type = "submit" value = "submit">Submit</button>   
+                    
         </div>
     );
 }
-export default Form;
+export default ContactUs;

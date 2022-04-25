@@ -1,71 +1,78 @@
-import React from "react"
+import React /*,{useState} */from "react"
 import Tabs from "./Tabs/Tabs"
-
-import Form from "./Form/Form"
+import Add from "./Add/Add"
 import EmployeeInfo from "./EmployeeInfo/EmployeeInfo"
+import ContactUs from "./ContactUs/ContactUs"
+import Option from "./Option/Option"
 const Title = () => {
-{/*import Button from "./Button/Button" */}
+
+/*import Button from "./Button/Button" */
 return( 
     <div>
         {/*heading of the form*/}
-        <h1>Form Creation</h1>
-        <p>Build a form created by Java Buddies</p>
+        <h1>Form Buddy</h1>
+        <h3>by Java Buddies</h3>
         {/* Tab button and the description of what they will do */}
         <Tabs>
-            <div label = "View">
-                <h2>View</h2>
+        <div label = "Create">
+                <h2>Create</h2>
+                <p>
+                    Allows user to custumize forms.
+                </p>
+                
+               <Option></Option>
+               
+                   <Add></Add>
+                   </div>
+                   
+                    <div label = "Edit">
+                <h2>
+                Edit Forms 
+                </h2>
+                <p>
+                    Where the client would need to type in the unique id of the form, 
+                    and then be asked the password, in order to make changes
+                </p>
+                <button 
+                type="edit" value='edit' >Edit</button>
+            </div> 
+
+            <div label = "Submit">
+                <h2>Submitted form</h2>
                 <p>
                     View the complete form that user wants to use.
                 </p>
+                <button type ="submit" className = "submit">submit</button>
+            </div> 
 
-            </div> 
-            <div label = "Test">
-                <h2>Testing</h2>
-                <p>
-                    Test forms by filling it out. It is than sent to Result to view.
-                </p>
-               
-            </div> 
-            <div label = "Result">
-                <h2>Result</h2>
+            <div label = "Complete">
+                <h2>Fill Out Forms</h2>
                 <p>
                    Displays the results of the recent forms created.
                 </p>
+                
                 </div>
-            <div label = "Create">
-                <h2>Create</h2>
-                <p>
-                    An easy to use platform that allows
-                    user to custumize forms.
-                </p>
-                <select>
-                       <option value="choose option">choose option ...</option>
-                       <option value="form">form</option>
-                       <option value="mutiple choice">mutliple choice</option>
-                       <option value ="contact us">Contact Us</option>
-                       <option value="none">none</option>
-                       
-                   </select>
-    </div> 
+
     <div label = "Contact Us">
                 <h2>Contact Us</h2>
-                <Form>
-                </Form>
+                <ContactUs>
+                </ContactUs>
               
-    </div> 
+    </div>
+
     <div label = "Employee Info">
                 <h2>Employee Information</h2>
                 <EmployeeInfo>
                 </EmployeeInfo>
               
     </div> 
-         </Tabs>
+ </Tabs>
         
   </div>
-)
+);
 }
 
-Title.getInitalProps= ({ query }) =>{
+Title.getInitalProps = ({ query }) =>{
     return{query};
 }
 

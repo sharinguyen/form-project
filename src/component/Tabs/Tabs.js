@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState,/*useEffect */} from "react";
 //import {useRouter} from 'next/router'
 import styles from "./Tabs.module.css";
 
@@ -29,7 +29,7 @@ const Tabs = ({ children }) => {
                  className ={label === activeTab ? styles.current : ""} 
                  key ={label}
                  > 
-                     <a href="#" onClick ={e => handleClick(e, label)}>
+                     <a href="2" onClick ={e => handleClick(e, label)}>
                      {label}
                      </a>
                 </li>
