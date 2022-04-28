@@ -60,6 +60,7 @@ function Validating() {
     name === errorMessages.name && (
       <div className="error">{errorMessages.message}</div>
     );
+    
 
   // JSX code for login form
   const renderForm = (
@@ -106,6 +107,7 @@ function Validating() {
       </div>
     </div>
   );
+  
 }
 
 export default Validating;

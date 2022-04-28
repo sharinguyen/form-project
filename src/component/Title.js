@@ -22,7 +22,6 @@ return(
                     Allows user to custumize forms.
                 </p>
                 
-               <Option></Option>
                <Validating></Validating>
                
                    <Create></Create>
@@ -54,6 +53,7 @@ return(
                 <p>
                    Displays the results of the recent forms created.
                 </p>
+                <Option></Option>
                 
                 </div>
 
