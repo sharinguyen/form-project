@@ -1,9 +1,11 @@
 import React /*,{useState} */from "react"
 import Tabs from "./Tabs/Tabs"
-import Add from "./Add/Add"
+import Create from "./Create/Create"
 import EmployeeInfo from "./EmployeeInfo/EmployeeInfo"
 import ContactUs from "./ContactUs/ContactUs"
 import Option from "./Option/Option"
+import Validating from "./Validating/Validating"
+
 const Title = () => {
 
 /*import Button from "./Button/Button" */
@@ -21,8 +23,9 @@ return(
                 </p>
                 
                <Option></Option>
+               <Validating></Validating>
                
-                   <Add></Add>
+                   <Create></Create>
                    </div>
                    
                     <div label = "Edit">
@@ -34,7 +37,8 @@ return(
                     and then be asked the password, in order to make changes
                 </p>
                 <button 
-                type="edit" value='edit' >Edit</button>
+                type="edit" value='edit' 
+                >Edit</button>
             </div> 
 
             <div label = "Submit">

@@ -1,7 +1,8 @@
 import { useState } from "react";
-import "./Add.css";
+import "./Create.css";
 
-function Add() {
+function Create() {
+
   const [elementList, setElementList] = useState([{ element: "" }]);
 
   /*changes index of elements when new element created */
@@ -28,7 +29,7 @@ function Add() {
       /* Name of css to set layout */
     <form className="Add" autoComplete="off">
       <div className="form-field">
-          {/*label of form */}
+          {/*label of form and element*/}
         <label htmlFor="element">Element(s)</label>
         {/*creates element list */}
         {elementList.map((singleElement, index) => (
@@ -58,7 +59,7 @@ function Add() {
                         </button>
                         <button 
                         type ="submit"
-                        ClassName = "submit"
+                        
                         >Submit</button> </>
 
               )}
@@ -68,6 +69,7 @@ function Add() {
 
             {/*Button to remove index */}
             <div className="second-division">
+                {/* Remove button only present when there is more than one box */}
               {elementList.length !== 1 && (
                 <button
                   type="button"
@@ -99,4 +101,4 @@ function Add() {
  
 }
 
-export default Add;
+export default Create;

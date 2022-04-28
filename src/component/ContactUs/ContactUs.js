@@ -28,10 +28,11 @@ const ContactUs = () => {
                    placeholder="Enter last name ..."
                    value ={last}
                    onChange={(e)=> setLast(e.target.value)}
+                   
                    />
                    <label>Phone Number: </label> 
                    <input 
-                   type ="number"
+                   type ="text"
                    required
                    placeholder="e.g. 1234567890"
                    value ={phone}
@@ -63,9 +64,11 @@ const ContactUs = () => {
                    <p>{mail}</p>
                    <p>{message}</p>
                 </form>
-                <button type= "button" value="clear"
+                <button type= "button" 
+                value="clear"
                 onClick="deleteSomething()">Clear</button>
-              <button type = "submit" value = "submit">Submit</button>   
+              <button type = "submit"
+              onClick="submit">Submit</button>   
                     
         </div>
     );

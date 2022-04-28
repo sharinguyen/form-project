@@ -37,6 +37,9 @@
     border-radius: 5px;
     border: 1px solid rgb(115, 115, 115);
   }
+  input[type="submit"]:hover {
+    background: #dbdcdc;
+  }
 
   /* color of box changes when it is clicked on */
   input:focus {
@@ -54,14 +57,19 @@
     margin: 0 5px 0.5rem 0;
     width: 100%;
   }
-  button {
-    
+
+  /*button changes color when mouse hovers it */
+  button[type="submit"]:hover {
+    background: #dbdcdc;
+  }
+
+  button {  
     background: none;
     outline: none;
     cursor: pointer;
     font-weight: 500;
     border-radius: 2px;
-
+    padding: 5px 10px;
     /*spacing for button */
     margin-right: 2%;
     
