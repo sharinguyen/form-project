@@ -9,7 +9,9 @@ function Validating() {
   //boolean  to determine if form has sucessfully submitted or not.
   const [isSubmitted, setIsSubmitted] = useState(false);
   //const [formId,setFormId] = useState({});
+
   // Valid User form info 
+  //how to store formId and password
   const database = [
     {
       formId: "form1",
@@ -91,9 +93,7 @@ function Validating() {
 
         {/*Submit button */}
         <div className="button-container">
-          <input 
-          type="submit" 
-          />
+          <input type ="submit"/>
         </div>
       </form>
     </div>
@@ -101,11 +101,11 @@ function Validating() {
 
   return (
     <div className="Validating">
-      <div className="login-form">
+      
           {/* Once user inputs form id and password the user would be logged in */}
         {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
       </div>
-    </div>
+  
   );
   
 }

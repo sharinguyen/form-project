@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from "react";
 //import styles from "./form.css";
 const EmployeeInfo = () => {
     const [employeeId,setEmployeeId] = useState('');
@@ -8,7 +9,15 @@ const EmployeeInfo = () => {
     const [phone,setPhone] = useState('');
     const [mail,setMail] = useState('');
    
-    
+    const clearInput = () => {
+        setEmployeeId('');
+        setBirthDate('');
+        setFirst('');
+        setLast('');
+        setPhone('');
+        setMail('');
+    };
+
     return(
         //uses form css to align the labels vertically
         <div className = "ContactUs">
@@ -42,7 +51,7 @@ const EmployeeInfo = () => {
                    />
                     <label>Birth Date: </label> 
                    <input 
-                   type ="number"
+                   type ="text"
                    required
                    placeholder="MMDDYYYY"
                    value ={birthDate}
@@ -50,7 +59,7 @@ const EmployeeInfo = () => {
                    /> 
                    <label>Phone Number: </label> 
                    <input 
-                   type ="number"
+                   type ="text"
                    required
                    placeholder="e.g. 1234567890"
                    value ={phone}
@@ -74,8 +83,9 @@ const EmployeeInfo = () => {
                    <p>{mail}</p>
                    
                 </form>
+                
                 <button type= "button" value="clear"
-                onClick="deleteSomething()">Clear</button>
+                onClick={clearInput}>Clear</button>
             <button type= "submit">Submit</button>
         </div>
     );

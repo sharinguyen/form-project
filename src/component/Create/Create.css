@@ -2,12 +2,11 @@
     box-sizing: border-box;
   }
   
-  .Add {
-    width: 60vh;
-    margin-left: 0auto;
+  .Create {
+    width: 80vh;
     display: flex;
     justify-content: space-between;
-        text-align: left;
+    text-align: left;
     
   }
   
@@ -28,16 +27,20 @@
   }
   
   /*color of box */
-  input {
+  .Create input {
     display: flex;
     height: 35px;
-    width: 100%;
+    width: 285px;
     padding: 7px;
     outline: none;
     border-radius: 5px;
-    border: 1px solid rgb(115, 115, 115);
+    border: 1px solid rgb(114, 114, 114);
   }
-  input[type="submit"]:hover {
+  .Create input[type="submit"]:hover {
+    background: #dbdcdc;
+  }
+  
+  input[type="button"]:hover {
     background: #dbdcdc;
   }
 
@@ -47,6 +50,8 @@
   }
   
   .element {
+    height: 35px;
+    width: 300px;
     display: flex;
     justify-content: space-between;
   }
@@ -60,14 +65,14 @@
 
   /*button changes color when mouse hovers it */
   button[type="submit"]:hover {
-    background: #dbdcdc;
+    background: hsl(180, 1%, 86%);
   }
 
   button {  
     background: none;
     outline: none;
     cursor: pointer;
-    font-weight: 500;
+    font-size: small;
     border-radius: 2px;
     padding: 5px 10px;
     /*spacing for button */
@@ -79,7 +84,7 @@
 display: flex;
 
   }
-   /* Add a Service */
+   /* Add a Element */
   .first-division button {
     align-self: flex-start;
     display: flex;

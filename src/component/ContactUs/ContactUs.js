@@ -1,5 +1,7 @@
 import { useState } from "react";
+import React from "react";
 import "./ContactUs.css";
+import Axios from 'axios';
 
 const ContactUs = () => {
     const [first,setFirst] = useState('');
@@ -7,6 +9,27 @@ const ContactUs = () => {
     const [phone,setPhone] = useState('');
     const [mail,setMail] = useState('');
     const [message,setMessage] = useState('');
+
+    const submit = () => {
+        Axios.post('http://localhost:3002/contactus', {
+            first: first,
+            last: last,
+            phone: phone,
+            mail: mail,
+            message: message,
+        }).then(() => {
+            console.log("sucess");
+        });
+    };
+
+    const clearInput = () => {
+        setFirst('');
+        setLast('');
+        setPhone('');
+        setMail('');
+        setMessage('');
+    };
+
     return(
         //uses form css to align the labels vertically
         <div className = "ContactUs">
@@ -57,18 +80,19 @@ const ContactUs = () => {
                   id="txtName"
                   onChange={(e)=> setMessage(e.target.value)}
                   ></textarea>
-                  {/*Display infomation of the form*/}
+                 { /*Display infomation of the form
                    <p>{first}</p>
                    <p>{last}</p>
                    <p>{phone}</p>
                    <p>{mail}</p>
-                   <p>{message}</p>
+                   <p>{message}</p> */}
                 </form>
-                <button type= "button" 
+                {/*<button type= "button" 
                 value="clear"
-                onClick="deleteSomething()">Clear</button>
-              <button type = "submit"
-              onClick="submit">Submit</button>   
+                onClick="deleteSomething()">Clear</button> */}
+              <button type= "button" value="clear"
+                onClick={clearInput}>Clear</button>
+               <button onClick={submit} >Submit</button>
                     
         </div>
     );

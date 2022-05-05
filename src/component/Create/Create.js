@@ -1,5 +1,7 @@
 import { useState } from "react";
+import React from "react";
 import "./Create.css";
+
 
 function Create() {
 
@@ -13,6 +15,7 @@ function Create() {
     setElementList(list);
   };
 
+  
 /* Used to remove index */
   const handleElementRemove = (index) => {
     const list = [...elementList];
@@ -27,11 +30,12 @@ function Create() {
 
   return (
       /* Name of css to set layout */
-    <form className="Add" autoComplete="off">
+    <form className="Create" autoComplete="off">
       <div className="form-field">
           {/*label of form and element*/}
         <label htmlFor="element">Element(s)</label>
         {/*creates element list */}
+        
         {elementList.map((singleElement, index) => (
         /*uses css to set layout */
           <div key={index} className="element">
@@ -45,7 +49,12 @@ function Create() {
                 value={singleElement.element}
                 onChange={(e) => handleElementChange(e, index)}
                 required
+               
               />
+               
+              
+              {/*add options to choose which type it */}
+              
 
               {/*the max index is 100. Add element by clicking button */}
               {elementList.length - 1 === index && elementList.length < 100 && (
@@ -58,9 +67,9 @@ function Create() {
 
                         </button>
                         <button 
-                        type ="submit"
-                        
-                        >Submit</button> </>
+                      
+                        className = "submit"
+                        >Save</button> </>
 
               )}
     
@@ -87,6 +96,7 @@ function Create() {
    
       {/*Displays elements information to ensure that it is being read. 
       Comment out or remove later */}
+      {/*
       <div className="output">
         <h2>Output</h2>
         {elementList &&
@@ -94,8 +104,9 @@ function Create() {
             <ul key={index}>
               {singleService.element && <li>{singleService.element}</li>}
             </ul>
-          ))}
-      </div>
+          )) 
+        } 
+      </div> */}
     </form>
   );
  

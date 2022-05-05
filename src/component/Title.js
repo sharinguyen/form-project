@@ -5,6 +5,8 @@ import EmployeeInfo from "./EmployeeInfo/EmployeeInfo"
 import ContactUs from "./ContactUs/ContactUs"
 import Option from "./Option/Option"
 import Validating from "./Validating/Validating"
+import Type from "./Type/Type"
+//import global from "style/global.css"
 
 const Title = () => {
 
@@ -21,11 +23,11 @@ return(
                 <p>
                     Allows user to custumize forms.
                 </p>
-                
-               <Validating></Validating>
-               
+                <Validating></Validating>
+
                    <Create></Create>
                    </div>
+                   
                    
                     <div label = "Edit">
                 <h2>
@@ -35,17 +37,10 @@ return(
                     Where the client would need to type in the unique id of the form, 
                     and then be asked the password, in order to make changes
                 </p>
+                <Validating></Validating>
                 <button 
                 type="edit" value='edit' 
                 >Edit</button>
-            </div> 
-
-            <div label = "Submit">
-                <h2>Submitted form</h2>
-                <p>
-                    View the complete form that user wants to use.
-                </p>
-                <button type ="submit" className = "submit">submit</button>
             </div> 
 
             <div label = "Complete">
@@ -54,6 +49,8 @@ return(
                    Displays the results of the recent forms created.
                 </p>
                 <Option></Option>
+                <button type ="submit" className = "submit">submit</button>
+          
                 
                 </div>
 
