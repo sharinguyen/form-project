@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from "react";
 import "./Create.css";
 
+//import Type from "../Type/Type";
 
 function Create() {
 
@@ -49,8 +50,9 @@ function Create() {
                 value={singleElement.element}
                 onChange={(e) => handleElementChange(e, index)}
                 required
-               
+                
               />
+              
                
               
               {/*add options to choose which type it */}
@@ -86,12 +88,20 @@ function Create() {
                   className = "remove-btn"
                 >
                   <span>Remove</span>
+                  
                 </button>
-              )}
+              )
+              
+              }
+              
             </div>
 
           </div>
-        ))}
+        ))
+
+        
+        }
+        
       </div>
    
       {/*Displays elements information to ensure that it is being read. 

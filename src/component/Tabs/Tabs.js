@@ -1,6 +1,6 @@
-import { useState,/*useEffect */} from "react";
+import { useState,/*useEffect*/ } from "react";
 import React from "react";
-//import {useRouter} from 'next/router'
+//import {useRoutes} from 'react-router-dom';
 import styles from "./Tabs.module.css";
 
 //import { slugify } from "../../utils/slugify";

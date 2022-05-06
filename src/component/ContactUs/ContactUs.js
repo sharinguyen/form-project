@@ -73,11 +73,12 @@ const ContactUs = () => {
                   {/*bigger textbox so that user can put more information in*/}
                   <textarea
                   type="text"
-                  required
+                  
                   /*leaves message inside box*/
                   placeholder ="Enter your messege ..."
                   value ={message}
                   id="txtName"
+                  required
                   onChange={(e)=> setMessage(e.target.value)}
                   ></textarea>
                  { /*Display infomation of the form

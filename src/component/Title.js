@@ -1,11 +1,11 @@
 import React /*,{useState} */from "react"
 import Tabs from "./Tabs/Tabs"
 import Create from "./Create/Create"
-import EmployeeInfo from "./EmployeeInfo/EmployeeInfo"
+//import EmployeeInfo from "./EmployeeInfo/EmployeeInfo"
 import ContactUs from "./ContactUs/ContactUs"
 import Option from "./Option/Option"
 import Validating from "./Validating/Validating"
-import Type from "./Type/Type"
+
 //import global from "style/global.css"
 
 const Title = () => {
@@ -14,7 +14,7 @@ const Title = () => {
 return( 
     <div>
         {/*heading of the form*/}
-        <h1>Form Buddy</h1>
+        <h1>Form Buddies</h1>
         <h3>by Java Buddies</h3>
         {/* Tab button and the description of what they will do */}
         <Tabs>
@@ -26,6 +26,7 @@ return(
                 <Validating></Validating>
 
                    <Create></Create>
+                  
                    </div>
                    
                    
@@ -60,13 +61,14 @@ return(
                 </ContactUs>
               
     </div>
-
+{/*
     <div label = "Employee Info">
                 <h2>Employee Information</h2>
                 <EmployeeInfo>
                 </EmployeeInfo>
               
     </div> 
+*/}
  </Tabs>
         
   </div>
