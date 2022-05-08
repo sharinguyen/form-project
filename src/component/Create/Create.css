@@ -1,101 +1,136 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  .Create {
-    width: 80vh;
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    
-  }
-  
-  .form-field {
-    flex: 2;
-  }
+  box-sizing: border-box;
 
-  .output {
-    margin-left: 3rem;
-    flex: 1;
-  }
-  .form-field label,
-  .Add h2 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 500;
-    color: rgb(84, 84, 84);
-  }
-  
-  /*color of box */
-  .Create input {
-    display: flex;
-    height: 35px;
-    width: 285px;
-    padding: 7px;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid rgb(114, 114, 114);
-  }
-  .Create input[type="submit"]:hover {
-    background: #dbdcdc;
-  }
-  
-  input[type="button"]:hover {
-    background: #dbdcdc;
-  }
+}
+ .Create {
+  width: 80vh;
+  margin: 5 rem auto;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
 
-  /* color of box changes when it is clicked on */
-  input:focus {
-    border: 2px solid rgb(14, 15, 16);
-  }
-  
-  .element {
-    height: 35px;
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-  }
+ 
+}
+.form-field {
+ 
+  flex: 3 px;
+}
 
-  .first-division {
-    display: flex;
-    flex-direction: column;
-    margin: 0 5px 0.5rem 0;
-    width: 100%;
-  }
-
-  /*button changes color when mouse hovers it */
-  button[type="submit"]:hover {
-    background: hsl(180, 1%, 86%);
-  }
-
-  button {  
-    background: none;
-    outline: none;
-    cursor: pointer;
-    font-size: small;
-    border-radius: 2px;
-    padding: 5px 10px;
-    /*spacing for button */
-    margin-right: 2%;
-    
-  }
-  
-  .submit{
+.Create output {
 display: flex;
+  flex: 1;
+}
+.form-field label{
+  margin: 0%;
+  font-family: Helvetica;
+  color: rgb(6, 6, 6);
+}
+ /*color of box */
+.Create input {
+  display: flex;
+  height: 35px;
+  width: 285px;
+  padding: 7px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgb(61, 61, 61);
+}
+input[type="submit"]:hover {
+  background: #dbdcdc;
+}
+ input[type="button"]:hover {
+  background: #dbdcdc;
+}
 
-  }
-   /* Add a Element */
-  .first-division button {
-    align-self: flex-start;
-    display: flex;
-    align-items: center;
-    margin-top: 0.5rem;
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(0, 0, 0);
+/* color of box changes when it is clicked on */
+input:focus {
+  border: 2px solid rgb(14, 15, 16);
+}
+.services{
+  flex-direction:row-reverse;
+  justify-content: space-between;
+}
+.Create element {
+  height: 35px;
+  width: 500px;
+  margin-top: 1%;
+  color: #0f0e0e;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.first-division {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px 0.5rem 0;
+  width: 100%;
+}
+
+/*button changes color when mouse hovers it */
+.Create button[type="submit"]:hover {
+  background: hsl(0, 0%, 52%);
+}
+
+.Create button { 
+  background: white;
+  outline: none;
+  cursor: pointer;
+  font-size: small;
+  border-radius: 2px;
+  padding: 5px 10px;
+  /*spacing for button */
+  margin-right: 23%;
+ 
+}
+ .submit{
+display: flex;
+color: rgb(0, 0, 0);
+border: 1px solid rgb(0, 0, 0);
+
+}
+ /* Add a Element */
+.first-division button {
+  align-self: flex-start;
+  display: flex;
+  
+  margin-top: 0.5rem;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+}
+  /* remove button*/
+.second-division button {
+  margin-bottom: 1%;
+  line-height: 22px;
+  display: flex;
+  color: red;
+  background-color:white;
+  border: 1px solid red;
+}
+
+
+
+  .Create input[type="formText"]{
+    height: 40px;
+    width: 290px;
+    color: #000000;
+    border: 3px solid rgba(0, 0, 0, 0.2);
   }
   
-   /* remove button*/
-  .second-division button {
-    color: red;
-    border: 1px solid red;
+  
+  .Create input[type="password"] {
+    height: 40px;
+    width: 290px;
+    color: #000000;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  .Create input[type="submit"] {
+    cursor: pointer;
+    height: 20px;
+    width: 90px;
+    font-size: small;
+    background: #fffdfd;
+    border: 1px solid #000000;
+    color: rgb(0, 0, 0);
+    padding: 7px 10px;
   }

@@ -90,11 +90,11 @@ function Validating() {
           />
           {renderErrorMessage("pass")}
         </div>
-
-        {/*Submit button */}
-        <div className="button-container">
+          {/*Submit button */}
+          <div className="button-container">
           <input type ="submit"/>
         </div>
+       
       </form>
     </div>
   );

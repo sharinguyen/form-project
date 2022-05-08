@@ -29,12 +29,39 @@ function Create() {
     setElementList([...elementList, { element: "" }]);
   };
 
+
+  //returns form id, password, and element
   return (
       /* Name of css to set layout */
     <form className="Create" autoComplete="off">
+       
+    <div >
+     {/*Form Id box*/}
+        <div>
+          <label>Form Id:</label>
+          <input 
+          type="formText" 
+          name="fname"
+          required 
+          />
+         
+        </div>
+
+        {/* password box */}
+        <div>
+          <label>Password: </label>
+          <input 
+          type="password" 
+          name="pass" 
+          required 
+          />
+         
+          </div>
+          
+        </div>
       <div className="form-field">
           {/*label of form and element*/}
-        <label htmlFor="element">Element(s)</label>
+        <label htmlFor="element">Element(s):</label>
         {/*creates element list */}
         
         {elementList.map((singleElement, index) => (
@@ -51,16 +78,14 @@ function Create() {
                 onChange={(e) => handleElementChange(e, index)}
                 required
                 
-              />
-              
-               
+              /> 
               
               {/*add options to choose which type it */}
               
 
               {/*the max index is 100. Add element by clicking button */}
               {elementList.length - 1 === index && elementList.length < 100 && (
-                <><button
+                <button
                             type="button"
                             onClick={handleElementAdd}
                             className="add-btn"
@@ -68,10 +93,7 @@ function Create() {
                             <span>Add Element</span>
 
                         </button>
-                        <button 
-                      
-                        className = "submit"
-                        >Save</button> </>
+                        
 
               )}
     
@@ -79,7 +101,7 @@ function Create() {
             
 
             {/*Button to remove index */}
-            <div className="second-division">
+            <div class ="col-md-11"className="second-division">
                 {/* Remove button only present when there is more than one box */}
               {elementList.length !== 1 && (
                 <button
@@ -101,12 +123,15 @@ function Create() {
 
         
         }
-        
+        {/*save button for all of Create Page*/}
+             <button
+             className = "submit"
+             >Save</button> 
       </div>
    
       {/*Displays elements information to ensure that it is being read. 
       Comment out or remove later */}
-      {/*
+      
       <div className="output">
         <h2>Output</h2>
         {elementList &&
@@ -115,8 +140,10 @@ function Create() {
               {singleService.element && <li>{singleService.element}</li>}
             </ul>
           )) 
+          
         } 
-      </div> */}
+      </div> 
+ 
     </form>
   );
  

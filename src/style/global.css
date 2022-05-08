@@ -2,10 +2,17 @@ html,
 body {
   padding: 0;
   margin: 0.1%;
+  height: 100%;
+  width: auto;
+  background-image: linear-gradient(to bottom, #f7f7f7, #f4f4f4,#e2eafe, #d8e2fc, #a9cdfa, #5db8f8);
   font-family: Helvetica;
 }
 
+h1{
+  margin-left: 1%;
+}
 h3{
+  margin-left: 1%;
   margin-top: -1.5%;
 }
 a {
@@ -13,6 +20,13 @@ a {
     text-decoration: none;
   }
   
-  * {
-    box-sizing: border-box;
+  .Title button{
+    background: white;
+    outline: black;
+    cursor: pointer;
+    font-size: small;
+    border-radius: 2px;
+    padding: 5px 10px;
+    /*spacing for button */
+    margin-right: 2%;
   }

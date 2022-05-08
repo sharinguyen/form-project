@@ -12,7 +12,7 @@
 }
 
 .current {
-  background: white;
+  background: #f4f4f4;
   color: blue;
   font-weight: bold;
   border: 2px solid blue;

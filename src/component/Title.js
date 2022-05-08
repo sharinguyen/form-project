@@ -6,6 +6,9 @@ import ContactUs from "./ContactUs/ContactUs"
 import Option from "./Option/Option"
 import Validating from "./Validating/Validating"
 
+//import ReactDOM from "react-dom";
+
+
 //import global from "style/global.css"
 
 const Title = () => {
@@ -23,7 +26,7 @@ return(
                 <p>
                     Allows user to custumize forms.
                 </p>
-                <Validating></Validating>
+   
 
                    <Create></Create>
                   
@@ -39,8 +42,9 @@ return(
                     and then be asked the password, in order to make changes
                 </p>
                 <Validating></Validating>
+       
                 <button 
-                type="edit" value='edit' 
+                type="button" value='edit' 
                 >Edit</button>
             </div> 
 
