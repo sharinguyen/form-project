@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 //import { render } from 'react-dom';
 
 /*trying to figure out how to have value link with its form */
-const types = [
+const options = [
   { value: '', label: 'Choose Option ...' },
-  { value: 'box', label: 'box' },
-  { value: 'textBox', label: 'texox' },
+  { value: 'text box', label: 'textbox' },
+  { value: 'check box', label: 'checkbox' },
   { value: 'Create', label: 'Create' },
   { value: '', label: 'None' },
 ];
@@ -13,13 +13,13 @@ const types = [
 class Type extends Component {
   
   state = {
-    selectedType: '',
+    selectedOption: '',
   
   }
 
   handleChange = ({ target }) => {
     this.setState({
-      selectedType: target.value
+      selectedOption: target.value
     })
   }
 
@@ -27,12 +27,14 @@ class Type extends Component {
     return (
       <div>
         <select
-          value={this.state.selectedType}
+          value={this.state.selectedOption}
           onChange={this.handleChange}
           >
-        {types.map(({ value, label }, index) => <option value={value} >{label}</option>)}
+        {options.map(({ value, label }, index) => <option value={value} >{label}</option>)}
 
         </select>
+        {/*shows option choosen below option */}
+        <text>{this.state.selectedOption}</text>
         
         
       </div>

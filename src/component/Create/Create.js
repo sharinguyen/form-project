@@ -8,6 +8,7 @@ function Create() {
 
   const [elementList, setElementList] = useState([{ element: "" }]);
 
+ 
   /*changes index of elements when new element created */
   const handleElementChange = (e, index) => {
     const { name, value } = e.target;
@@ -81,10 +82,10 @@ function Create() {
               /> 
               
               {/*add options to choose which type it */}
-              
+   
 
-              {/*the max index is 100. Add element by clicking button */}
-              {elementList.length - 1 === index && elementList.length < 100 && (
+              {/*the max index is 20. Add element by clicking button */}
+              {elementList.length - 1 === index && elementList.length < 20 && (
                 <button
                             type="button"
                             onClick={handleElementAdd}
@@ -93,18 +94,17 @@ function Create() {
                             <span>Add Element</span>
 
                         </button>
-                        
-
+      
               )}
-    
+     
             </div>
             
 
             {/*Button to remove index */}
-            <div class ="col-md-11"className="second-division">
+            <div className="second-division">
                 {/* Remove button only present when there is more than one box */}
               {elementList.length !== 1 && (
-                <button
+               <button
                   type="button"
                   onClick = {() => handleElementRemove(index)}
                   className = "remove-btn"
@@ -117,27 +117,28 @@ function Create() {
               }
               
             </div>
-
+        
           </div>
         ))
 
         
         }
         {/*save button for all of Create Page*/}
-             <button
+        <button
              className = "submit"
              >Save</button> 
       </div>
    
-      {/*Displays elements information to ensure that it is being read. 
-      Comment out or remove later */}
+   
+      {/*Displays elements information to box*/}
       
-      <div className="output">
-        <h2>Output</h2>
+      <div className="box">
+      <h2>Form</h2>
         {elementList &&
           elementList.map((singleService, index) => (
             <ul key={index}>
-              {singleService.element && <li>{singleService.element}</li>}
+              
+              {singleService.element && <li>{singleService.element}</li>  }
             </ul>
           )) 
           
